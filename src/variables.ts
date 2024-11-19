@@ -9,7 +9,6 @@ export let userHand: Deck = [];
 export let dealerHand: Deck = [];
 
 export let deck = createDeck();
-deck = shuffleDeck(deck);
 
 export function turnOff() {
   running = false;
@@ -21,4 +20,11 @@ export function displayMoney() {
 
 export function setMoney(m: number) {
   money = m;
+}
+
+export function resetGame() {
+  userHand = [];
+  dealerHand = [];
+  deck = createDeck();
+  deck = shuffleDeck(deck);
 }
